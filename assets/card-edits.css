@@ -286,3 +286,21 @@ body{background:var(--mia-pink-soft)}
     background:linear-gradient(90deg,rgba(115,9,48,.42) 0%,rgba(215,58,80,.11) 68%,rgba(215,58,80,0) 100%)!important;
   }
 }
+
+
+/* Final hero fill: full-bleed campaign artwork, no left or right pink side panels. */
+.hero-art{
+  display:block!important;
+  background:none!important;
+}
+.hero-art img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  background:transparent!important;
+}
+@media(max-width:700px){
+  .hero-art img{object-fit:cover!important;object-position:center center!important}
+}
