@@ -304,3 +304,49 @@ body{background:var(--mia-pink-soft)}
 @media(max-width:700px){
   .hero-art img{object-fit:cover!important;object-position:center center!important}
 }
+
+
+/* Visible Lightscapes lockup for the static export's legacy hero heading. */
+.hero-copy h1#hero-title{
+  color:transparent!important;
+  font-size:0!important;
+  line-height:0!important;
+  letter-spacing:0!important;
+  width:clamp(210px,24vw,360px)!important;
+  height:clamp(150px,16vw,230px)!important;
+  margin:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:flex-start!important;
+  gap:10px!important;
+}
+.hero-copy h1#hero-title::before{
+  content:""!important;
+  display:block!important;
+  width:clamp(86px,8vw,132px)!important;
+  height:clamp(40px,3.7vw,58px)!important;
+  background:url("/mia-festive-edit/assets/logo-white.png") left center/contain no-repeat!important;
+  filter:brightness(0) invert(1)!important;
+}
+.hero-copy h1#hero-title::after{
+  content:"Lightscapes\A by Mia"!important;
+  white-space:pre-line!important;
+  display:block!important;
+  color:#fff!important;
+  font-family:Fraunces,Georgia,serif!important;
+  font-size:clamp(45px,5vw,78px)!important;
+  font-weight:500!important;
+  font-style:normal!important;
+  line-height:.83!important;
+  letter-spacing:-.065em!important;
+  text-shadow:0 3px 22px rgba(83,0,26,.25)!important;
+}
+@media(max-width:700px){
+  .hero-copy h1#hero-title{
+    width:190px!important;
+    height:132px!important;
+    gap:6px!important;
+  }
+  .hero-copy h1#hero-title::before{width:58px!important;height:28px!important}
+  .hero-copy h1#hero-title::after{font-size:36px!important;line-height:.86!important}
+}
