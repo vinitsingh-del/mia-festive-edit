@@ -394,3 +394,26 @@ body{background:var(--mia-pink-soft)}
  .hero-slides .hero-slide-product-1{opacity:1!important;}
  .hero-slides .hero-slide-product-2,.hero-slides .hero-slide-product-3{display:none!important;}
 }
+
+
+/* Hydration-safe hero replacement: hide the original React hero art and rotate only the three new banners. */
+.hero > picture.hero-art,
+.hero > .hero-slides{display:none!important;}
+.hero{
+  background-image:url("/mia-festive-edit/assets/lightscapes-product-banner-1.webp")!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+  animation:miaLiveHeroSwap 18s steps(1,end) infinite!important;
+}
+@keyframes miaLiveHeroSwap{
+  0%,32.999%{background-image:url("/mia-festive-edit/assets/lightscapes-product-banner-1.webp")}
+  33%,65.999%{background-image:url("/mia-festive-edit/assets/lightscapes-product-banner-2.webp")}
+  66%,100%{background-image:url("/mia-festive-edit/assets/lightscapes-product-banner-3.webp")}
+}
+@media(max-width:700px){
+  .hero{background-position:center center!important;}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero{animation:none!important;background-image:url("/mia-festive-edit/assets/lightscapes-product-banner-1.webp")!important;}
+}
