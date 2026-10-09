@@ -1,0 +1,25 @@
+/* Cache-safe Gold and Diamond Edit colour overrides. */
+.precious-edits .metal-edit:first-child{
+  background:radial-gradient(ellipse at 12% 0%,#fff5c8a6 0%,transparent 42%),linear-gradient(128deg,#bd8517 0%,#e2b344 52%,#c18b1f 100%);
+  color:#fff;
+  box-shadow:inset 0 1px #fff3c799,inset 0 0 0 1px #fff3c780;
+}
+.precious-edits .metal-edit:first-child h2,
+.precious-edits .metal-edit:first-child .section-heading p,
+.precious-edits .metal-edit:first-child .shop-link{
+  color:#fff;
+  text-shadow:0 2px 12px #5f3b0070;
+}
+.precious-edits .metal-edit:first-child .shop-link{border-color:#fff9}
+.precious-edits .metal-edit+.metal-edit{
+  background:radial-gradient(ellipse at 88% 0%,#ffffff2e 0%,transparent 58%),#d14a61;
+  color:#fff;
+  box-shadow:inset 0 0 0 1px #fff5;
+}
+.precious-edits .metal-edit+.metal-edit h2,
+.precious-edits .metal-edit+.metal-edit .section-heading p,
+.precious-edits .metal-edit+.metal-edit .shop-link{
+  color:#fff;
+  text-shadow:0 2px 12px #791d3070;
+}
+.precious-edits .metal-edit+.metal-edit .shop-link{border-color:#fff9}
