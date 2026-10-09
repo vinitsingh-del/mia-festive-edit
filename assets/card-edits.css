@@ -350,3 +350,28 @@ body{background:var(--mia-pink-soft)}
   .hero-copy h1#hero-title::before{width:58px!important;height:28px!important}
   .hero-copy h1#hero-title::after{font-size:36px!important;line-height:.86!important}
 }
+
+
+/* Two-banner Lightscapes hero — shared full-bleed frame with no gutters. */
+.hero{position:relative!important;background:#d73a50!important;}
+.hero-slides{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;overflow:hidden!important;z-index:0!important;}
+.hero-slides .hero-slide{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;opacity:0;animation:miaHeroCrossfade 14s ease-in-out infinite!important;}
+.hero-slides .hero-slide-current{animation-delay:0s!important;}
+.hero-slides .hero-slide-supplied{animation-delay:7s!important;}
+.hero-slides .hero-slide img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;background:transparent!important;}
+.hero-wash,.hero-copy,.hero-diya,.hero-border-lights,.hero-indicators{z-index:2!important;}
+.hero-copy,.hero-diya,.hero-border-lights,.hero-indicators{position:absolute!important;}
+.hero-indicators span:nth-child(3){display:none!important;}
+.hero-indicators span{animation:miaIndicator 14s ease-in-out infinite!important;}
+.hero-indicators span:nth-child(2){animation-delay:7s!important;}
+@keyframes miaHeroCrossfade{0%,43%{opacity:1}50%,93%{opacity:0}100%{opacity:1}}
+@keyframes miaIndicator{0%,43%{background:#fff;opacity:1}50%,93%{background:rgba(255,255,255,.55);opacity:.55}100%{background:#fff;opacity:1}}
+@media(max-width:700px){
+  .hero-slides .hero-slide img{object-fit:cover!important;object-position:center center!important;}
+  .hero-slides .hero-slide-supplied img{object-position:54% center!important;}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-slides .hero-slide{animation:none!important;}
+  .hero-slides .hero-slide-current{opacity:1!important;}
+  .hero-slides .hero-slide-supplied{display:none!important;}
+}
