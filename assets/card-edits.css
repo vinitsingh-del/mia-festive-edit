@@ -40,3 +40,83 @@ body{background:var(--mia-pink-soft)}
 .label-card{background:var(--mia-pink)!important}
 .precious-edits .metal-edit+.metal-edit{background:radial-gradient(ellipse at 88% 0%,#ffffff2e 0%,transparent 58%),var(--mia-pink)!important}
 @media(max-width:700px){.hero{min-height:610px}.hero-art{background-position:57% center!important}.hero-copy{max-width:300px!important}.hero-wash{background:linear-gradient(90deg,rgba(96,7,34,.44),rgba(159,12,57,.08) 82%,transparent)!important}}
+
+
+/* Lightscapes composition refinement: preserve the entire supplied banner. */
+.hero{
+  aspect-ratio:1672 / 941;
+  min-height:0!important;
+  background:var(--mia-pink)!important;
+}
+.hero-art{
+  background-color:var(--mia-pink)!important;
+  background-size:contain!important;
+  background-position:center center!important;
+}
+.hero-copy{
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  padding-block:0!important;
+  display:flex!important;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:22px;
+}
+.hero-copy h1.hero-lightscapes-lockup{
+  display:flex!important;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:4px;
+  color:#fff!important;
+  text-shadow:0 3px 22px rgba(83,0,26,.25);
+}
+.hero-lightscapes-lockup img{
+  display:block;
+  width:clamp(88px,8vw,136px);
+  height:auto;
+  margin:0 0 8px;
+  filter:brightness(0) invert(1);
+}
+.hero-lightscapes-lockup .lightscapes-name{
+  font-family:Fraunces,Georgia,serif;
+  font-size:clamp(48px,5.7vw,88px);
+  font-weight:500;
+  line-height:.9;
+  letter-spacing:-.065em;
+}
+.hero-lightscapes-lockup em{
+  display:block!important;
+  color:#fff!important;
+  font-family:Fraunces,Georgia,serif;
+  font-size:clamp(22px,2.4vw,34px)!important;
+  font-style:italic;
+  letter-spacing:.01em!important;
+  line-height:1.1;
+  margin:0!important;
+}
+.festival-grid .label-card,
+.look-grid .label-card{
+  background:var(--mia-pink)!important;
+}
+.festival-grid .product-cutout,
+.look-grid .product-cutout{
+  display:grid!important;
+  place-items:center!important;
+  padding:clamp(12px,1.35vw,22px)!important;
+}
+.festival-grid .product-cutout img,
+.look-grid .product-cutout img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+@media(max-width:700px){
+  .hero{aspect-ratio:1672 / 941;min-height:0!important}
+  .hero-art{background-size:contain!important;background-position:center!important}
+  .hero-copy{left:7vw!important;gap:9px}
+  .hero-lightscapes-lockup img{width:56px;margin-bottom:2px}
+  .hero-lightscapes-lockup .lightscapes-name{font-size:clamp(28px,8vw,42px)}
+  .hero-lightscapes-lockup em{font-size:16px!important}
+  .hero-copy .cta{transform:scale(.8);transform-origin:left center}
+}
