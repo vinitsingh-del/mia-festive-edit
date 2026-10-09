@@ -223,3 +223,66 @@ body{background:var(--mia-pink-soft)}
     line-height:1.2!important;
   }
 }
+
+
+/* Supplied Diwali campaign image — preserve original hero proportions and show all artwork. */
+.hero{
+  aspect-ratio:3.04!important;
+  min-height:0!important;
+  background:#d73a50!important;
+  overflow:hidden!important;
+}
+.hero-art{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  height:100%!important;
+  inset:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+.hero-art source{display:initial!important}
+.hero-art img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  background:#d73a50!important;
+}
+.hero-wash{
+  background:linear-gradient(90deg,rgba(115,9,48,.46) 0%,rgba(171,25,70,.16) 34%,rgba(215,58,80,0) 58%)!important;
+}
+.hero-copy{
+  z-index:3!important;
+  width:46%!important;
+  max-width:none!important;
+  padding:4.5% 0 4% 7%!important;
+}
+.hero-copy h1.hero-lightscapes-lockup,
+.hero-copy h1.hero-lightscapes-lockup .lightscapes-name,
+.hero-copy h1.hero-lightscapes-lockup em{color:#fff!important}
+.hero-lightscapes-lockup img{
+  display:block!important;
+  filter:brightness(0) invert(1)!important;
+}
+.hero-copy p{display:none!important}
+
+@media(max-width:700px){
+  .hero{
+    aspect-ratio:1672 / 941!important;
+    min-height:0!important;
+  }
+  .hero-art img{
+    object-fit:cover!important;
+    object-position:center center!important;
+  }
+  .hero-copy{
+    width:60%!important;
+    padding:12% 0 10% 7%!important;
+  }
+  .hero-wash{
+    background:linear-gradient(90deg,rgba(115,9,48,.42) 0%,rgba(215,58,80,.11) 68%,rgba(215,58,80,0) 100%)!important;
+  }
+}
