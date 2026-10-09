@@ -120,3 +120,106 @@ body{background:var(--mia-pink-soft)}
   .hero-lightscapes-lockup em{font-size:16px!important}
   .hero-copy .cta{transform:scale(.8);transform-origin:left center}
 }
+
+
+/* Restore original compact, edge-to-edge Mia hero and circular Festival Edit tiles. */
+.hero{
+  aspect-ratio:3.04!important;
+  min-height:0!important;
+  width:100%!important;
+  background:var(--mia-pink)!important;
+}
+.hero-art{
+  display:block!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  background:none!important;
+  background-image:none!important;
+  background-size:auto!important;
+}
+.hero-art source{display:initial!important}
+.hero-art img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+}
+.hero-wash{
+  background:linear-gradient(90deg,rgba(117,10,49,.46) 0%,rgba(183,29,79,.20) 31%,rgba(215,58,80,0) 57%)!important;
+}
+.hero-copy{
+  width:46%!important;
+  max-width:none!important;
+  left:auto!important;
+  top:auto!important;
+  transform:none!important;
+  padding:4.5% 0 4% 7%!important;
+  justify-content:center!important;
+}
+.hero-copy h1.hero-lightscapes-lockup{font-size:inherit!important}
+.hero-copy .cta{transform:none!important}
+
+.festival-grid .label-card{
+  background:transparent!important;
+  border-radius:0!important;
+  overflow:visible!important;
+  box-shadow:none!important;
+}
+.festival-grid .product-cutout{
+  aspect-ratio:1!important;
+  width:100%!important;
+  padding:clamp(10px,1.25vw,20px)!important;
+  overflow:hidden!important;
+  border-radius:50%!important;
+  background:var(--mia-pink)!important;
+  display:grid!important;
+  place-items:center!important;
+}
+.festival-grid .product-cutout img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  aspect-ratio:1!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+.festival-grid .card-label{
+  justify-content:center!important;
+  padding:13px 4px 0!important;
+  text-align:center!important;
+}
+.festival-grid .card-label svg{display:none!important}
+
+@media(max-width:700px){
+  .hero{
+    aspect-ratio:1.78!important;
+    min-height:0!important;
+  }
+  .hero-art{width:100%!important;height:100%!important}
+  .hero-art img{object-position:center center!important}
+  .hero-wash{background:linear-gradient(90deg,rgba(117,10,49,.42),rgba(215,58,80,.08) 68%,transparent)!important}
+  .hero-copy{
+    width:60%!important;
+    left:auto!important;
+    top:auto!important;
+    transform:none!important;
+    padding:12% 0 10% 7%!important;
+    gap:10px!important;
+  }
+  .festival-grid{
+    gap:16px 12px!important;
+  }
+  .festival-grid .label-card{min-width:0!important}
+  .festival-grid .product-cutout{
+    width:100%!important;
+    padding:10px!important;
+  }
+  .festival-grid .card-label{
+    min-height:0!important;
+    padding:9px 2px 0!important;
+    font-size:13px!important;
+    line-height:1.2!important;
+  }
+}
